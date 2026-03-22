@@ -153,6 +153,14 @@ jupyter notebook notebooks/demo_end2end.ipynb
 code notebooks/demo_end2end.ipynb
 ```
 
+## result presentation
+![](results/figures/completion_comparison.png)
+![](results/figures/latency_comparison.png)
+![](results/figures/radar_comparison.png)
+![](results/figures/relevance_comparison.png)
+![](results/figures/relevance_heatmap.png)
+![](results/figures/response_length_comparison.png)
+
 ## Acknowledgments
 
 - [LlamaIndex](https://www.llamaindex.ai/) - The core framework
