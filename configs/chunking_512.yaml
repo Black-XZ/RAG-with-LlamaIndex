@@ -1,0 +1,21 @@
+# Chunking Configuration: Large Chunks
+# chunk_size=512, overlap_ratio=0.1
+
+chunking:
+  strategy: "sentence"  # "sentence", "paragraph", or "token"
+  chunk_size: 512
+  overlap_ratio: 0.1    # 10% overlap
+  overlap_tokens: 51    # approximately 10% of 512
+
+embedding:
+  model_name: "sentence-transformers/all-MiniLM-L6-v2"
+  dimension: 384
+  device: "cpu"          # "cpu" or "cuda"
+
+index:
+  type: "vector_store"   # "vector_store", "faiss", or "simple"
+  save_path: "results/runs/{run_id}/index"
+
+metadata:
+  description: "Large chunk strategy (512 tokens) for broader context"
+  created_by: "RAG-LlamaIndex-Project"

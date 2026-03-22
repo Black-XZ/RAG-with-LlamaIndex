@@ -1,0 +1,52 @@
+======================================================================
+RAG System Evaluation Analysis Report
+======================================================================
+
+1. CONFIGURATION SUMMARY
+----------------------------------------
+  Flan-T5/256: 20 queries evaluated
+  Flan-T5/512: 20 queries evaluated
+  Mistral-7B/256: 20 queries evaluated
+  Mistral-7B/512: 20 queries evaluated
+
+2. KEY METRICS
+----------------------------------------
+Config               Relevance    Completion      Latency     
+Flan-T5/256          2.10 +/- 0.72 0.0%            0.89s       
+Flan-T5/512          2.10 +/- 0.55 0.0%            0.23s       
+Mistral-7B/256       3.80 +/- 1.24 65.0%           11.12s      
+Mistral-7B/512       3.90 +/- 1.07 70.0%           6.72s       
+
+3. KEY FINDINGS
+----------------------------------------
+  - Best Relevance Score: Mistral-7B/512
+    (3.90/5.0)
+
+  - Best Task Completion: Mistral-7B/512
+    (70.0%)
+
+  - Fastest Response: Flan-T5/512
+    (0.23s avg)
+
+4. LLM COMPARISON
+----------------------------------------
+  Flan-T5:
+    Avg Relevance: 2.10/5.0
+    Avg Completion: 0.0%
+    Avg Latency: 0.56s
+
+  Mistral-7B:
+    Avg Relevance: 3.85/5.0
+    Avg Completion: 67.5%
+    Avg Latency: 8.92s
+
+5. CHUNKING COMPARISON
+----------------------------------------
+  Chunk-256:
+    Avg Relevance: 2.95/5.0
+    Avg Completion: 32.5%
+
+  Chunk-512:
+    Avg Relevance: 3.00/5.0
+    Avg Completion: 35.0%
+

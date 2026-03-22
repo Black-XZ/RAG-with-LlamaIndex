@@ -1,0 +1,198 @@
+[
+  {
+    "chunk_id": "sample_doc2_chunk_0",
+    "node_id": "28a4b083-197b-4fcd-b2f0-89bf6fa1f910",
+    "source_file": "sample_doc2.txt",
+    "chunk_index": 0,
+    "text_preview": "# Sample Document 2: Text Chunking Strategies in RAG Systems ## Introduction Text chunking is a critical preprocessing step in RAG systems that determines how documents are split into manageable units..."
+  },
+  {
+    "chunk_id": "sample_doc2_chunk_1",
+    "node_id": "aa6d1072-e9a4-4a01-8ce6-68950d370d5a",
+    "source_file": "sample_doc2.txt",
+    "chunk_index": 1,
+    "text_preview": "A common approach uses 10-20% overlap ratio. **Benefits of Overlap:** - Prevents information loss at chunk boundaries - Improves recall for queries spanning multiple chunks - Helps maintain coherent c..."
+  },
+  {
+    "chunk_id": "sample_doc2_chunk_2",
+    "node_id": "c56d1c7a-4f17-425b-bee1-dae69cb3d015",
+    "source_file": "sample_doc2.txt",
+    "chunk_index": 2,
+    "text_preview": "### 4. Semantic Chunking Use embeddings to identify natural topic boundaries. More sophisticated but computationally expensive. ## Recommendations For most RAG applications: - Start with 256-512 token..."
+  },
+  {
+    "chunk_id": "sample_doc5_chunk_0",
+    "node_id": "28367ad3-b734-42e2-b075-f09bb2ecbc07",
+    "source_file": "sample_doc5.txt",
+    "chunk_index": 0,
+    "text_preview": "# Sample Document 5: Large Language Models in RAG - Mistral vs T5 ## Introduction The choice of language model significantly impacts RAG system performance. This document compares two commonly used mo..."
+  },
+  {
+    "chunk_id": "sample_doc5_chunk_1",
+    "node_id": "7a61543c-272c-44dc-bc4e-1b6ac48af027",
+    "source_file": "sample_doc5.txt",
+    "chunk_index": 1,
+    "text_preview": "### Strengths - **Strong Reasoning**: Excellent at multi-step reasoning and analysis - **Instruction Following**: Accurately follows system prompts and constraints - **Long Context**: Handles extended..."
+  },
+  {
+    "chunk_id": "sample_doc5_chunk_2",
+    "node_id": "23cceeb7-660c-458c-8cd0-ba37bb8affc1",
+    "source_file": "sample_doc5.txt",
+    "chunk_index": 2,
+    "text_preview": "Flan-T5 is T5 fine-tuned on instruction data. ### Strengths - **Efficiency**: Smaller model size enables faster inference - **Open Source**: Freely available with permissive licensing - **Training Sta..."
+  },
+  {
+    "chunk_id": "sample_doc5_chunk_3",
+    "node_id": "380c931c-be08-4401-875e-3fb23c442997",
+    "source_file": "sample_doc5.txt",
+    "chunk_index": 3,
+    "text_preview": "xt) - Beam size: 4-5 for more coherent generation ## Comparative Analysis ### Quality Comparison | Aspect | Mistral-7B | T5-base | |--------|------------|---------| | Factual Accuracy | High | Moderat..."
+  },
+  {
+    "chunk_id": "sample_doc5_chunk_4",
+    "node_id": "06b77833-e9a9-40cd-b215-8422142c5d08",
+    "source_file": "sample_doc5.txt",
+    "chunk_index": 4,
+    "text_preview": "oderate | | Coherence | Excellent | Good | | Reasoning | Strong | Basic | | Conciseness | Good | Good | | Instruction Following | Excellent | Moderate | ### Latency Comparison | Metric | Mistral-7B | ..."
+  },
+  {
+    "chunk_id": "sample_doc5_chunk_5",
+    "node_id": "b10e9b56-4c4f-41dc-a489-b28879086d79",
+    "source_file": "sample_doc5.txt",
+    "chunk_index": 5,
+    "text_preview": "-7B | T5-base | |--------|------------|---------| | Prefill Time | Higher | Lower | | Generation Speed | Moderate | Fast | | Memory Usage | High | Low | | CPU Feasibility | Limited | Good | ### Use Ca..."
+  },
+  {
+    "chunk_id": "sample_doc5_chunk_6",
+    "node_id": "5490c048-dd52-4e75-ac62-faf2aeb87263",
+    "source_file": "sample_doc5.txt",
+    "chunk_index": 6,
+    "text_preview": "Use Case Suitability **Mistral-7B recommended for:** - Complex analytical questions - Detailed explanations - Nuanced reasoning tasks - Production systems with GPU support **T5-base recommended for:**..."
+  },
+  {
+    "chunk_id": "sample_doc5_chunk_7",
+    "node_id": "e9eaca67-b53b-43e4-84a2-1100ecd8de4b",
+    "source_file": "sample_doc5.txt",
+    "chunk_index": 7,
+    "text_preview": "for:** - Resource-constrained environments - Simple factual retrieval - Fast prototyping - Educational purposes ## Hybrid Approaches Consider using T5-base as a fast baseline and Mistral-7B for final ..."
+  },
+  {
+    "chunk_id": "sample_doc5_chunk_8",
+    "node_id": "6d378c74-ace9-4c9c-a32b-15517751ec18",
+    "source_file": "sample_doc5.txt",
+    "chunk_index": 8,
+    "text_preview": "final production or complex queries. This allows systematic comparison of retrieval quality independent of generation capability. ## Conclusion Both models have their place in the RAG ecosystem. T5-ba..."
+  },
+  {
+    "chunk_id": "sample_doc6_chunk_0",
+    "node_id": "25deb2d6-cd7a-46f4-bdb8-c65aad26e6be",
+    "source_file": "sample_doc6.txt",
+    "chunk_index": 0,
+    "text_preview": "# Sample Document 6: Vector Databases and Indexing for RAG ## Introduction Vector databases are essential infrastructure for RAG systems, enabling efficient similarity search over high-dimensional emb..."
+  },
+  {
+    "chunk_id": "sample_doc6_chunk_1",
+    "node_id": "99244342-a170-4af1-98f3-caf265efec44",
+    "source_file": "sample_doc6.txt",
+    "chunk_index": 1,
+    "text_preview": "**IndexHNSW**: Hierarchical Navigable Small World - Graph-based navigation - Excellent recall-speed trade-off - Higher memory usage ### Choosing an Index | Index Type | Use Case | Memory | Speed | Acc..."
+  },
+  {
+    "chunk_id": "sample_doc6_chunk_2",
+    "node_id": "504ca290-5406-4585-926e-8e81f81b7bac",
+    "source_file": "sample_doc6.txt",
+    "chunk_index": 2,
+    "text_preview": "**Document Loading**: Load and parse documents (PDF, TXT, etc.) 2. **Text Cleaning**: Remove noise, normalize text 3. **Chunking**: Split into appropriate chunk sizes 4. **Embedding Generation**: Conv..."
+  },
+  {
+    "chunk_id": "sample_doc6_chunk_3",
+    "node_id": "ed91479d-93dc-4340-9361-d8bc93299c0f",
+    "source_file": "sample_doc6.txt",
+    "chunk_index": 3,
+    "text_preview": "**Embedding Generation**: Convert chunks to vectors 5. **Index Construction**: Build searchable index structure 6. **Metadata Attachment**: Store chunk metadata for retrieval ## Optimization Strategie..."
+  },
+  {
+    "chunk_id": "sample_doc6_chunk_4",
+    "node_id": "9b2ce3aa-ac33-4b7e-9c32-b40faa6294d7",
+    "source_file": "sample_doc6.txt",
+    "chunk_index": 4,
+    "text_preview": "FAISS provides excellent building blocks for efficient similarity search, while LlamaIndex abstracts these complexities for easier system development. The choice of index type should balance accuracy,..."
+  },
+  {
+    "chunk_id": "sample_doc1_chunk_0",
+    "node_id": "c8f397c3-5c4d-481f-9043-2d5c54e5c871",
+    "source_file": "sample_doc1.txt",
+    "chunk_index": 0,
+    "text_preview": "# Sample Document 1: Introduction to Retrieval-Augmented Generation (RAG) ## Overview Retrieval-Augmented Generation (RAG) represents a paradigm shift in how large language models (LLMs) process and g..."
+  },
+  {
+    "chunk_id": "sample_doc1_chunk_1",
+    "node_id": "559303c3-6bcb-4651-bd61-eccc3808afab",
+    "source_file": "sample_doc1.txt",
+    "chunk_index": 1,
+    "text_preview": "The LLM then generates a response conditioned on this retrieved information, ensuring factual accuracy and grounding. 3. **Augmentation Strategy**: Various strategies exist for combining retrieved con..."
+  },
+  {
+    "chunk_id": "sample_doc1_chunk_2",
+    "node_id": "f1989b33-f3df-49b7-8bad-f754502fb540",
+    "source_file": "sample_doc1.txt",
+    "chunk_index": 2,
+    "text_preview": "As research progresses, we expect to see more sophisticated retrieval and generation strategies that further improve system performance."
+  },
+  {
+    "chunk_id": "sample_doc3_chunk_0",
+    "node_id": "d1614f1d-5922-4ee3-8e08-1ee93de974c7",
+    "source_file": "sample_doc3.txt",
+    "chunk_index": 0,
+    "text_preview": "# Sample Document 3: Dense Retrieval and Embedding Models ## Introduction to Dense Retrieval Dense retrieval uses neural network-based embeddings to represent queries and documents in a continuous vec..."
+  },
+  {
+    "chunk_id": "sample_doc3_chunk_1",
+    "node_id": "05b41501-7c88-4b42-be46-18da5a102766",
+    "source_file": "sample_doc3.txt",
+    "chunk_index": 1,
+    "text_preview": "The model produces a fixed-size dense vector representation 3. Similar texts have vectors that are close in the embedding space ### Similarity Search - Query embedding is compared against document emb..."
+  },
+  {
+    "chunk_id": "sample_doc3_chunk_2",
+    "node_id": "a66e737b-14fb-48a9-8e5e-34d93e858e07",
+    "source_file": "sample_doc3.txt",
+    "chunk_index": 2,
+    "text_preview": "**Generalization**: Handles synonyms and paraphrases 3. **Cross-lingual**: Some models support cross-lingual retrieval 4. **Compact**: Fixed-size representations enable efficient indexing ## Limitatio..."
+  },
+  {
+    "chunk_id": "sample_doc3_chunk_3",
+    "node_id": "e1756fc9-6b8e-47e1-944d-9c4ded09d218",
+    "source_file": "sample_doc3.txt",
+    "chunk_index": 3,
+    "text_preview": "**Memory**: Dense indices can be larger than sparse indices 4. **Hot Tokens**: Some tokens may be underrepresented in training ## Hybrid Retrieval Many production systems combine dense and sparse retr..."
+  },
+  {
+    "chunk_id": "sample_doc4_chunk_0",
+    "node_id": "1ec81230-7aaf-48aa-8492-830ca6fc871b",
+    "source_file": "sample_doc4.txt",
+    "chunk_index": 0,
+    "text_preview": "# Sample Document 4: Evaluation Metrics for RAG Systems ## Introduction Evaluating RAG systems requires measuring both the retrieval component and the generation component, as well as their integratio..."
+  },
+  {
+    "chunk_id": "sample_doc4_chunk_1",
+    "node_id": "b57fcd5a-703d-40f7-8886-c14020253b6e",
+    "source_file": "sample_doc4.txt",
+    "chunk_index": 1,
+    "text_preview": "- Check factual consistency with source documents - Often requires manual annotation or LLM-based evaluation ### Relevance Degree to which the answer addresses the user's question. - Both semantic and..."
+  },
+  {
+    "chunk_id": "sample_doc4_chunk_2",
+    "node_id": "f1e6cfdc-5683-441c-9ddf-7e52a9af762a",
+    "source_file": "sample_doc4.txt",
+    "chunk_index": 2,
+    "text_preview": "Moderately relevant, some useful info 4. Mostly relevant with minor issues 5. Highly relevant, comprehensive answer ### Task Completion (0/1) Binary judgment of whether the question was answered corre..."
+  },
+  {
+    "chunk_id": "sample_doc4_chunk_3",
+    "node_id": "b352b488-1096-463a-b5d6-2f92514c1adb",
+    "source_file": "sample_doc4.txt",
+    "chunk_index": 3,
+    "text_preview": "**Edge Cases**: Out-of-domain questions; ambiguous queries; no-answer scenarios 4. **Stress Tests**: Long contexts; contradictory information; noisy documents ## Conclusion No single metric captures a..."
+  }
+]

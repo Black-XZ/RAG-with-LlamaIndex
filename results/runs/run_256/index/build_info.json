@@ -1,0 +1,9 @@
+{
+  "run_id": "20260321_224650",
+  "timestamp": "20260321_224659",
+  "config_file": "configs/chunking_256.yaml",
+  "num_documents": 6,
+  "chunk_size": 256,
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "index_output_dir": "results/runs/20260321_224650/index"
+}

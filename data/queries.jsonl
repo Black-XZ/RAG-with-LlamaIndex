@@ -1,0 +1,20 @@
+{"id": "q001", "question": "What is the main difference between BM25 and dense retrieval in the context of RAG systems?", "doc_hint": "retrieval methods"}
+{"id": "q002", "question": "How does chunk size affect the quality of retrieved context in a RAG pipeline?", "doc_hint": "chunking strategy"}
+{"id": "q003", "question": "What are the advantages of using sentence-transformers for embedding in RAG applications?", "doc_hint": "embedding models"}
+{"id": "q004", "question": "Explain the role of overlap in text chunking and why it matters for RAG performance.", "doc_hint": "chunking overlap"}
+{"id": "q005", "question": "How does Mistral-7B-Instruct compare to T5-base in terms of generation quality?", "doc_hint": "LLM comparison"}
+{"id": "q006", "question": "What is retrieval-augmented generation (RAG) and why is it useful?", "doc_hint": "RAG introduction"}
+{"id": "q007", "question": "Describe the evaluation metrics commonly used for assessing RAG system performance.", "doc_hint": "evaluation metrics"}
+{"id": "q008", "question": "What is the purpose of context grounding in large language models?", "doc_hint": "context grounding"}
+{"id": "q009", "question": "How does vector similarity search work in the retrieval component of RAG?", "doc_hint": "vector search"}
+{"id": "q010", "question": "What are the challenges of using PDFs as data sources in RAG systems?", "doc_hint": "PDF processing"}
+{"id": "q011", "question": "Explain the concept of relevance scoring in information retrieval.", "doc_hint": "relevance scoring"}
+{"id": "q012", "question": "What is the difference between sparse and dense retrieval approaches?", "doc_hint": "retrieval types"}
+{"id": "q013", "question": "How can temperature settings affect the output of LLM-based generators?", "doc_hint": "LLM parameters"}
+{"id": "q014", "question": "What is the purpose of prompt templating in RAG systems?", "doc_hint": "prompt engineering"}
+{"id": "q015", "question": "Describe the workflow of building a vector index for document retrieval.", "doc_hint": "indexing process"}
+{"id": "q016", "question": "What are the benefits of using FAISS for vector storage in RAG?", "doc_hint": "FAISS"}
+{"id": "q017", "question": "How does the top-k retrieval strategy work in practice?", "doc_hint": "retrieval strategy"}
+{"id": "q018", "question": "What is meant by 'grounding' an LLM response in retrieved documents?", "doc_hint": "grounding"}
+{"id": "q019", "question": "Explain the importance of citation and attribution in RAG-generated answers.", "doc_hint": "citations"}
+{"id": "q020", "question": "What techniques can be used to improve retrieval recall in RAG systems?", "doc_hint": "retrieval improvement"}

@@ -1,0 +1,71 @@
+# Sample Document 2: Text Chunking Strategies in RAG Systems
+
+## Introduction
+
+Text chunking is a critical preprocessing step in RAG systems that determines how documents are split into manageable units for retrieval. The choice of chunk size and overlap can significantly impact both retrieval precision and generation quality.
+
+## Chunk Size Considerations
+
+### Small Chunks (128-256 tokens)
+
+**Advantages:**
+- Higher precision in retrieval: smaller chunks capture specific concepts more accurately
+- Reduced noise: irrelevant context is minimized
+- Better for questions requiring specific facts
+
+**Disadvantages:**
+- May lose broader context
+- More chunks to manage in the index
+- Potentially fragmented understanding
+
+### Large Chunks (512-1024 tokens)
+
+**Advantages:**
+- Preserve more contextual information
+- Better for complex, multi-faceted questions
+- More coherent document segments
+
+**Disadvantages:**
+- Lower precision: may include irrelevant information
+- Semantic dilution: important details may be buried
+- Higher computational cost for embedding
+
+## Overlap Strategy
+
+Overlapping chunks involve including some tokens from adjacent chunks to preserve context at boundaries. A common approach uses 10-20% overlap ratio.
+
+**Benefits of Overlap:**
+- Prevents information loss at chunk boundaries
+- Improves recall for queries spanning multiple chunks
+- Helps maintain coherent context around key concepts
+
+**Drawbacks:**
+- Increased index size
+- Potential redundancy in retrieved results
+- More complex evaluation metrics
+
+## Chunking Methods
+
+### 1. Fixed-Size Chunking
+Simple approach: split text into equal-sized chunks. Fast but may break semantic units.
+
+### 2. Sentence-Based Chunking
+Split by sentence boundaries using NLP tools. Preserves semantic coherence better.
+
+### 3. Paragraph-Based Chunking
+Split at paragraph boundaries. Good for structured documents but may result in variable chunk sizes.
+
+### 4. Semantic Chunking
+Use embeddings to identify natural topic boundaries. More sophisticated but computationally expensive.
+
+## Recommendations
+
+For most RAG applications:
+- Start with 256-512 token chunks
+- Use 10% overlap for boundary preservation
+- Experiment with different strategies based on document structure
+- Consider hybrid approaches for mixed document types
+
+## Conclusion
+
+Chunking strategy is not one-size-fits-all. The optimal approach depends on document characteristics, query types, and specific application requirements. Systematic experimentation with different configurations is essential for optimizing RAG system performance.

@@ -1,0 +1,72 @@
+[
+  {
+    "chunk_id": "sample_doc2_chunk_0",
+    "node_id": "91988d4b-bef1-41f0-b065-7ccbc6fbf641",
+    "source_file": "sample_doc2.txt",
+    "chunk_index": 0,
+    "text_preview": "# Sample Document 2: Text Chunking Strategies in RAG Systems ## Introduction Text chunking is a critical preprocessing step in RAG systems that determines how documents are split into manageable units..."
+  },
+  {
+    "chunk_id": "sample_doc5_chunk_0",
+    "node_id": "93b7c6a3-c232-4c37-b032-487f04aa3942",
+    "source_file": "sample_doc5.txt",
+    "chunk_index": 0,
+    "text_preview": "# Sample Document 5: Large Language Models in RAG - Mistral vs T5 ## Introduction The choice of language model significantly impacts RAG system performance. This document compares two commonly used mo..."
+  },
+  {
+    "chunk_id": "sample_doc5_chunk_1",
+    "node_id": "11a4daf2-1c55-44e0-b6cc-98d55b565db3",
+    "source_file": "sample_doc5.txt",
+    "chunk_index": 1,
+    "text_preview": "Flan-T5 is T5 fine-tuned on instruction data. ### Strengths - **Efficiency**: Smaller model size enables faster inference - **Open Source**: Freely available with permissive licensing - **Training Sta..."
+  },
+  {
+    "chunk_id": "sample_doc6_chunk_0",
+    "node_id": "69f0defc-2cc2-497b-a59a-e07cd7ae5011",
+    "source_file": "sample_doc6.txt",
+    "chunk_index": 0,
+    "text_preview": "# Sample Document 6: Vector Databases and Indexing for RAG ## Introduction Vector databases are essential infrastructure for RAG systems, enabling efficient similarity search over high-dimensional emb..."
+  },
+  {
+    "chunk_id": "sample_doc6_chunk_1",
+    "node_id": "e45a29a9-b41d-49ce-afa2-01e038d1cd64",
+    "source_file": "sample_doc6.txt",
+    "chunk_index": 1,
+    "text_preview": "**Text Cleaning**: Remove noise, normalize text 3. **Chunking**: Split into appropriate chunk sizes 4. **Embedding Generation**: Convert chunks to vectors 5. **Index Construction**: Build searchable i..."
+  },
+  {
+    "chunk_id": "sample_doc1_chunk_0",
+    "node_id": "c61353eb-4e53-4ff2-b88d-0217b82d3aa0",
+    "source_file": "sample_doc1.txt",
+    "chunk_index": 0,
+    "text_preview": "# Sample Document 1: Introduction to Retrieval-Augmented Generation (RAG) ## Overview Retrieval-Augmented Generation (RAG) represents a paradigm shift in how large language models (LLMs) process and g..."
+  },
+  {
+    "chunk_id": "sample_doc3_chunk_0",
+    "node_id": "72c9e230-5c6c-4c27-92a8-050a05c098ac",
+    "source_file": "sample_doc3.txt",
+    "chunk_index": 0,
+    "text_preview": "# Sample Document 3: Dense Retrieval and Embedding Models ## Introduction to Dense Retrieval Dense retrieval uses neural network-based embeddings to represent queries and documents in a continuous vec..."
+  },
+  {
+    "chunk_id": "sample_doc3_chunk_1",
+    "node_id": "f9f11fc9-1024-4da8-b13f-e58479830dee",
+    "source_file": "sample_doc3.txt",
+    "chunk_index": 1,
+    "text_preview": "**Computational Cost**: Neural encoding is slower than BM25 2. **Training Dependency**: Performance depends on training data coverage 3. **Memory**: Dense indices can be larger than sparse indices 4. ..."
+  },
+  {
+    "chunk_id": "sample_doc4_chunk_0",
+    "node_id": "11e214c6-826d-4051-b076-79e5dc9767a6",
+    "source_file": "sample_doc4.txt",
+    "chunk_index": 0,
+    "text_preview": "# Sample Document 4: Evaluation Metrics for RAG Systems ## Introduction Evaluating RAG systems requires measuring both the retrieval component and the generation component, as well as their integratio..."
+  },
+  {
+    "chunk_id": "sample_doc4_chunk_1",
+    "node_id": "e390b5a6-0f06-4b06-9ce1-137cbc90c526",
+    "source_file": "sample_doc4.txt",
+    "chunk_index": 1,
+    "text_preview": "Mostly relevant with minor issues 5. Highly relevant, comprehensive answer ### Task Completion (0/1) Binary judgment of whether the question was answered correctly. ### Comparative Assessment Side-by-..."
+  }
+]

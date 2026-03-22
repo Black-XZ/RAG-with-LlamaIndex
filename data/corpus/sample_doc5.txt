@@ -1,0 +1,90 @@
+# Sample Document 5: Large Language Models in RAG - Mistral vs T5
+
+## Introduction
+
+The choice of language model significantly impacts RAG system performance. This document compares two commonly used models: Mistral-7B-Instruct and T5-base (or Flan-T5-base).
+
+## Mistral-7B-Instruct
+
+### Overview
+Mistral-7B-Instruct is a 7-billion parameter instruction-tuned model that excels at following complex instructions and generating coherent, detailed responses.
+
+### Strengths
+- **Strong Reasoning**: Excellent at multi-step reasoning and analysis
+- **Instruction Following**: Accurately follows system prompts and constraints
+- **Long Context**: Handles extended context windows effectively
+- **Instruction Tuning**: Pre-trained on instruction-following data
+
+### Limitations
+- **Resource Requirements**: Needs substantial compute for inference
+- **Memory Footprint**: 7B parameters require significant VRAM
+- **Quantization Trade-offs**: 4-bit quantization reduces quality but enables deployment
+
+### Configuration Recommendations
+- Temperature: 0.1-0.3 for factual tasks, 0.5-0.7 for creative
+- Max new tokens: 256-512 for concise answers, 512-1024 for detailed
+- Top-p: 0.9 for balanced sampling
+
+## T5-base / Flan-T5-base
+
+### Overview
+T5 (Text-to-Text Transfer Transformer) treats all NLP tasks as text-to-text problems. Flan-T5 is T5 fine-tuned on instruction data.
+
+### Strengths
+- **Efficiency**: Smaller model size enables faster inference
+- **Open Source**: Freely available with permissive licensing
+- **Training Stability**: Proven architecture with good defaults
+- **Multitask Capability**: Handles diverse task types
+
+### Limitations
+- **Generation Quality**: Less nuanced than larger models
+- **Context Length**: Limited to 512 tokens input
+- **Instruction Following**: Less robust than specialized instruction models
+
+### Configuration Recommendations
+- Temperature: 0.1-0.5 depending on task
+- Max input length: 256-512 tokens (account for prompt + context)
+- Beam size: 4-5 for more coherent generation
+
+## Comparative Analysis
+
+### Quality Comparison
+
+| Aspect | Mistral-7B | T5-base |
+|--------|------------|---------|
+| Factual Accuracy | High | Moderate |
+| Coherence | Excellent | Good |
+| Reasoning | Strong | Basic |
+| Conciseness | Good | Good |
+| Instruction Following | Excellent | Moderate |
+
+### Latency Comparison
+
+| Metric | Mistral-7B | T5-base |
+|--------|------------|---------|
+| Prefill Time | Higher | Lower |
+| Generation Speed | Moderate | Fast |
+| Memory Usage | High | Low |
+| CPU Feasibility | Limited | Good |
+
+### Use Case Suitability
+
+**Mistral-7B recommended for:**
+- Complex analytical questions
+- Detailed explanations
+- Nuanced reasoning tasks
+- Production systems with GPU support
+
+**T5-base recommended for:**
+- Resource-constrained environments
+- Simple factual retrieval
+- Fast prototyping
+- Educational purposes
+
+## Hybrid Approaches
+
+Consider using T5-base as a fast baseline and Mistral-7B for final production or complex queries. This allows systematic comparison of retrieval quality independent of generation capability.
+
+## Conclusion
+
+Both models have their place in the RAG ecosystem. T5-base serves as an efficient baseline for development and testing, while Mistral-7B provides higher quality generation for production deployments. The choice depends on specific requirements for quality, latency, and available resources.

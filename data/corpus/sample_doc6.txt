@@ -1,0 +1,93 @@
+# Sample Document 6: Vector Databases and Indexing for RAG
+
+## Introduction
+
+Vector databases are essential infrastructure for RAG systems, enabling efficient similarity search over high-dimensional embeddings. This document covers key concepts and implementations.
+
+## FAISS (Facebook AI Similarity Search)
+
+FAISS is a widely-used library for efficient similarity search and clustering of dense vectors.
+
+### Index Types
+
+1. **IndexFlatIP**: Exact search with inner product (cosine similarity with normalized vectors)
+   - Best accuracy, O(N) search
+   - Good for small datasets (<1M vectors)
+
+2. **IndexIVFFlat**: Approximate nearest neighbor with inverted file index
+   - Faster search O(N/k) where k is number of centroids
+   - Requires training on representative data
+
+3. **IndexPQ**: Product Quantization for memory-efficient storage
+   - Compressed vectors, fast search
+   - Trade-off with accuracy
+
+4. **IndexHNSW**: Hierarchical Navigable Small World
+   - Graph-based navigation
+   - Excellent recall-speed trade-off
+   - Higher memory usage
+
+### Choosing an Index
+
+| Index Type | Use Case | Memory | Speed | Accuracy |
+|------------|----------|--------|-------|----------|
+| FlatIP | Small data, exact search | High | Slow | 100% |
+| IVFFlat | Medium data, balanced | Medium | Fast | High |
+| PQ | Large data, memory limited | Low | Fast | Moderate |
+| HNSW | Production, high quality | High | Fast | Very High |
+
+## LlamaIndex Vector Store Integration
+
+LlamaIndex provides abstractions over various vector stores:
+
+### Built-in VectorStoreIndex
+- Default in-memory storage
+- Simple API for indexing and querying
+- Supports persistence to disk
+
+### External Integrations
+- FAISS
+- Pinecone
+- Weaviate
+- Chroma
+- Qdrant
+- Milvus
+
+## Index Building Process
+
+1. **Document Loading**: Load and parse documents (PDF, TXT, etc.)
+2. **Text Cleaning**: Remove noise, normalize text
+3. **Chunking**: Split into appropriate chunk sizes
+4. **Embedding Generation**: Convert chunks to vectors
+5. **Index Construction**: Build searchable index structure
+6. **Metadata Attachment**: Store chunk metadata for retrieval
+
+## Optimization Strategies
+
+### Batch Processing
+- Process documents in batches to manage memory
+- Typical batch size: 32-128 documents
+
+### Caching Embeddings
+- Cache generated embeddings to avoid recomputation
+- Store alongside index for reproducibility
+
+### Index Updates
+- Incremental index updates for new documents
+- Periodic full rebuilds for quality maintenance
+
+## Persistence and Versioning
+
+### Best Practices
+- Save index with metadata (chunk size, embedding model, timestamp)
+- Use descriptive naming: `index_{chunk_size}_{embedding_model}_{date}`
+- Maintain version history for reproducibility
+
+### Storage Format
+- FAISS binary format (.faiss file)
+- Metadata as JSON
+- Document chunks as separate storage
+
+## Conclusion
+
+Vector indexing is a critical component of RAG systems. FAISS provides excellent building blocks for efficient similarity search, while LlamaIndex abstracts these complexities for easier system development. The choice of index type should balance accuracy, speed, and memory requirements.

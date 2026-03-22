@@ -1,0 +1,107 @@
+# Sample Document 4: Evaluation Metrics for RAG Systems
+
+## Introduction
+
+Evaluating RAG systems requires measuring both the retrieval component and the generation component, as well as their integration. This document covers the key metrics used in RAG evaluation.
+
+## Retrieval Metrics
+
+### Precision@K
+The fraction of retrieved documents that are relevant.
+- Precision@1: Focus on top result quality
+- Precision@5: Broader coverage assessment
+
+### Recall@K
+The fraction of relevant documents that are retrieved.
+- Critical for comprehensive question answering
+- Trade-off with precision
+
+### MRR (Mean Reciprocal Rank)
+Average of 1/rank for each query's first relevant document.
+- Emphasizes getting relevant docs early
+- Range: 0 to 1, higher is better
+
+### NDCG@K (Normalized Discounted Cumulative Gain)
+Accounts for both relevance and position of retrieved documents.
+- Standard metric in information retrieval
+- Handles graded relevance judgments
+
+## Generation Metrics
+
+### Faithfulness / Groundedness
+Measures how well generated answers align with retrieved context.
+- Check factual consistency with source documents
+- Often requires manual annotation or LLM-based evaluation
+
+### Relevance
+Degree to which the answer addresses the user's question.
+- Both semantic and topical relevance matter
+- Can be evaluated automatically or manually
+
+### Answer Correctness
+Compares generated answer against reference answers.
+- BLEU, ROUGE for lexical overlap (limited)
+- BERTScore for semantic similarity
+- Manual evaluation remains gold standard
+
+## End-to-End RAG Metrics
+
+### RAGAS (RAG Assessment)
+Comprehensive framework covering:
+- Faithfulness: Answer grounded in context
+- Answer Relevance: Answer addresses the question
+- Context Relevance: Retrieved context is pertinent
+
+### Trulens
+Production-focused evaluation framework:
+- Context relevance and recall
+- Answer groundedness
+- Hallucination detection
+
+## Human Evaluation Protocols
+
+### Relevance Scoring (1-5)
+1. Completely irrelevant
+2. Partially relevant, major gaps
+3. Moderately relevant, some useful info
+4. Mostly relevant with minor issues
+5. Highly relevant, comprehensive answer
+
+### Task Completion (0/1)
+Binary judgment of whether the question was answered correctly.
+
+### Comparative Assessment
+Side-by-side comparison of different system configurations.
+
+## Latency Metrics
+
+- Time to First Token (TTFT)
+- Total Generation Time
+- Retrieval Latency
+- End-to-End Latency
+
+## Response Quality Metrics
+
+### Length Analysis
+- Word count
+- Character count
+- Sentence count
+- Ratio of source-attributed content
+
+### Readability
+- Flesch reading ease
+- Sentence complexity
+- Technical term density
+
+## Designing an Evaluation Suite
+
+A comprehensive RAG evaluation should include:
+
+1. **Retrieval Tests**: Small, precise queries; complex multi-hop queries
+2. **Generation Tests**: Factual questions; reasoning tasks; summarization
+3. **Edge Cases**: Out-of-domain questions; ambiguous queries; no-answer scenarios
+4. **Stress Tests**: Long contexts; contradictory information; noisy documents
+
+## Conclusion
+
+No single metric captures all aspects of RAG quality. A combination of automated metrics, human evaluation, and task-specific tests provides the most reliable assessment. Regular evaluation throughout development helps identify issues early and measure improvement.

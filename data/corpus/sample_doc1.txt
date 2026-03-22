@@ -1,0 +1,32 @@
+# Sample Document 1: Introduction to Retrieval-Augmented Generation (RAG)
+
+## Overview
+
+Retrieval-Augmented Generation (RAG) represents a paradigm shift in how large language models (LLMs) process and generate information. Traditional LLMs are limited by their training data, which has a fixed cutoff date and may not contain domain-specific or up-to-date information. RAG addresses these limitations by combining the power of retrieval systems with generative models.
+
+## How RAG Works
+
+The RAG architecture consists of three main components:
+
+1. **Retrieval Component**: Given a user query, the system searches a knowledge base (typically a vector database) to find relevant documents or text chunks. Modern retrieval systems use dense embeddings from transformer models to capture semantic similarity.
+
+2. **Generation Component**: The retrieved context is combined with the original query to form a prompt. The LLM then generates a response conditioned on this retrieved information, ensuring factual accuracy and grounding.
+
+3. **Augmentation Strategy**: Various strategies exist for combining retrieved content with the query, including simple concatenation, cross-attention mechanisms, and iterative retrieval-refinement loops.
+
+## Benefits of RAG
+
+- **Factual Grounding**: Responses are anchored in actual documents, reducing hallucinations.
+- **Up-to-date Information**: The knowledge base can be updated without retraining the LLM.
+- **Domain Adaptation**: Specialized knowledge bases enable LLMs to answer domain-specific questions.
+- **Transparency**: Citations allow users to verify the sources of generated information.
+
+## Challenges
+
+- Retrieval quality significantly impacts generation quality.
+- Chunking strategies must balance granularity with context completeness.
+- Latency considerations: retrieval adds time to the generation pipeline.
+
+## Conclusion
+
+RAG bridges the gap between parametric knowledge (in model weights) and non-parametric knowledge (in external databases), enabling more reliable and adaptable AI systems. As research progresses, we expect to see more sophisticated retrieval and generation strategies that further improve system performance.

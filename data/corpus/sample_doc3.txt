@@ -1,0 +1,68 @@
+# Sample Document 3: Dense Retrieval and Embedding Models
+
+## Introduction to Dense Retrieval
+
+Dense retrieval uses neural network-based embeddings to represent queries and documents in a continuous vector space. Unlike traditional sparse methods like BM25, dense retrieval captures semantic relationships between text segments.
+
+## How Dense Retrieval Works
+
+### Embedding Generation
+1. A pre-trained transformer encoder (e.g., BERT, Sentence-BERT) processes text
+2. The model produces a fixed-size dense vector representation
+3. Similar texts have vectors that are close in the embedding space
+
+### Similarity Search
+- Query embedding is compared against document embeddings using cosine similarity
+- Top-k most similar documents are retrieved
+- Ranking is based on semantic similarity, not keyword frequency
+
+## Popular Embedding Models
+
+### Sentence-BERT (SBERT)
+- Specifically designed for semantic similarity tasks
+- Produces sentence-level embeddings
+- All-MiniLM-L6-v2: Fast, lightweight, 384 dimensions
+- all-mpnet-base-v2: Higher quality, 768 dimensions, slower
+
+### BGE (BAAI General Embedding)
+- State-of-the-art performance on benchmarks
+- Available in various sizes (base, large)
+- Strong multilingual support
+
+### Instructor (HXDG)
+- Task-aware embeddings
+- Can be customized for specific domains
+
+## Advantages of Dense Retrieval
+
+1. **Semantic Understanding**: Captures meaning beyond keyword matching
+2. **Generalization**: Handles synonyms and paraphrases
+3. **Cross-lingual**: Some models support cross-lingual retrieval
+4. **Compact**: Fixed-size representations enable efficient indexing
+
+## Limitations
+
+1. **Computational Cost**: Neural encoding is slower than BM25
+2. **Training Dependency**: Performance depends on training data coverage
+3. **Memory**: Dense indices can be larger than sparse indices
+4. **Hot Tokens**: Some tokens may be underrepresented in training
+
+## Hybrid Retrieval
+
+Many production systems combine dense and sparse retrieval:
+
+- **Cascade Approach**: Run both, merge results
+- **Dense First**: Use dense retrieval, rerank with sparse features
+- **Late Fusion**: Combine scores from both methods
+
+## Evaluation Metrics
+
+Common metrics for dense retrieval:
+- Recall@K: Fraction of relevant documents in top-K
+- MRR (Mean Reciprocal Rank): Position of first relevant document
+- NDCG@K: Normalized Discounted Cumulative Gain
+- Hit Rate: Whether any relevant document appears in top-K
+
+## Conclusion
+
+Dense retrieval has become a cornerstone of modern RAG systems, enabling semantic understanding that was not possible with traditional keyword-based methods. The choice of embedding model significantly impacts system performance and should be selected based on specific task requirements.

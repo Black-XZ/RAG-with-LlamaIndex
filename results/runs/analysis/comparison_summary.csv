@@ -1,0 +1,5 @@
+﻿Configuration,Avg Relevance (1-5),Relevance Std,Min Relevance,Max Relevance,Task Completion Rate,Avg Words,Avg Retrieval Latency (ms),Avg Generation Latency (s),Avg Total Latency (s)
+Flan-T5/256,2.1,0.72,1.0,4.0,0.0%,4.8,17.57,0.877,0.895
+Flan-T5/512,2.1,0.55,1.0,4.0,0.0%,5.2,17.28,0.211,0.228
+Mistral-7B/256,3.8,1.24,2.0,5.0,65.0%,115.8,17.83,11.103,11.121
+Mistral-7B/512,3.9,1.07,2.0,5.0,70.0%,135.3,18.02,6.698,6.716

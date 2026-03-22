@@ -1,0 +1,18 @@
+{
+  "run_id": "20260321_224650",
+  "timestamp": "2026-03-21T22:46:59.782728",
+  "config": {
+    "chunk_size": 256,
+    "overlap_ratio": 0.1,
+    "overlap_tokens": 25,
+    "strategy": "sentence",
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "embedding_dim": 384,
+    "index_type": "vector_store"
+  },
+  "num_documents": 6,
+  "num_nodes": 28,
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "chunk_size": 256,
+  "overlap_ratio": 0.1
+}
