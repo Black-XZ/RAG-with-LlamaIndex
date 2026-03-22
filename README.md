@@ -38,8 +38,6 @@ project-root/
 │   ├── logs/                   # Execution logs
 │   ├── runs/                   # Experiment outputs
 │   └── figures/                # Visualization charts
-├── REPORT_OUTLINE.md           # Research report outline
-├── PROGRESS_REPORT_TEMPLATE.md # Progress report template
 ├── requirements.txt            # Python dependencies
 └── README.md                   # This file
 ```
@@ -52,13 +50,12 @@ project-root/
 # Clone or navigate to project directory
 cd "e:\RAG with LlamaIndex"
 
-# Create virtual environment (recommended)
-python -m venv venv
-.\venv\Scripts\activate  # Windows
-# source venv/bin/activate  # Linux/Mac
-
 # Install dependencies
+conda create -n llamaindex python=3.10 -y
+conda activate llamaindex
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
 pip install -r requirements.txt
+pip install "numpy<2.0" "transformers<5.0"
 ```
 
 ### 2. Add Your Documents
@@ -106,10 +103,9 @@ python src/run_eval.py --llm mistral7b --chunk 512
 
 ### 5. View Results
 
-Results are saved to `results/runs/<timestamp>/`:
+Results are saved to `results/runs/`:
 
 - `eval_<llm>_chunk<size>.csv` - Detailed results
-- `human_eval_template.csv` - Template for human evaluation
 - `comparison_table.csv` - Cross-configuration comparison
 
 ## Configuration
@@ -157,78 +153,10 @@ jupyter notebook notebooks/demo_end2end.ipynb
 code notebooks/demo_end2end.ipynb
 ```
 
-## Hardware Requirements
-
-| Component | Minimum | Recommended |
-|-----------|---------|-------------|
-| RAM | 8 GB | 16 GB |
-| GPU VRAM | - | 8 GB (for Mistral-7B) |
-| Storage | 5 GB | 10 GB |
-
-### CPU-Only Mode
-
-The system works on CPU with:
-- Flan-T5-base (recommended for CPU)
-- Sentence-BERT embeddings
-
-Mistral-7B requires GPU with at least 8GB VRAM, or can use 4-bit quantization.
-
-## Troubleshooting
-
-### Issue: CUDA out of memory
-
-```bash
-# Use quantization for Mistral-7B
-python src/run_eval.py --llm mistral7b --chunk 256 --use-quantization
-```
-
-### Issue: Model download fails
-
-Models are downloaded automatically. If issues persist:
-```bash
-# Set HuggingFace cache
-export HF_HOME=/path/to/cache
-```
-
-### Issue: PDF parsing fails
-
-For scanned PDFs, consider using OCR tools first (e.g., pdf2image + Tesseract).
-
-## Development
-
-### Adding New LLM Backends
-
-1. Implement `BaseLLMBackend` interface in `src/llm_backends.py`
-2. Add to `create_llm_backend()` factory function
-
-### Adding New Chunking Strategies
-
-1. Create new YAML config in `configs/`
-2. Update `src/indexing.py` if custom parsing is needed
-
-## Citation
-
-If you use this code in your research, please cite:
-
-```bibtex
-@software{rag-llamaindex-2024,
-  title = {RAG with LlamaIndex: Document QA System},
-  author = {[Your Name]},
-  year = {2024},
-  url = {https://github.com/...}
-}
-```
-
-## License
-
-[Specify your license]
-
 ## Acknowledgments
 
 - [LlamaIndex](https://www.llamaindex.ai/) - The core framework
 - [Hugging Face](https://huggingface.co/) - Model hosting
 - [FAISS](https://github.com/facebookresearch/faiss) - Vector similarity search
 
----
 
-For questions or issues, please open an issue on the project repository.
