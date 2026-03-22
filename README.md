@@ -1,4 +1,4 @@
-# RAG with LlamaIndex
+# Building and Evaluating a Document Question Answering System with LlamaIndex: A Study of Chunking Strategies and LLM Backends
 
 A Document Question Answering system built with LlamaIndex, featuring configurable chunking strategies and multiple LLM backends for comparative evaluation.
 
